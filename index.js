@@ -133,6 +133,57 @@
 
 
 
-console.log( "One");
-console.log( "Two");
-console.log( "Three");
+// console.log( "One");
+// console.log( "Two");
+// console.log( "Three");
+
+
+// function sumofsqrt(a, b) {
+//     let sum = Math.sqrt(a) + Math.sqrt(b);
+//     console.log("Sum of square roots =", sum);
+// }
+
+// sumofsqrt(16, 25);
+
+
+
+// Promise in JS 
+
+// const myPromise=new Promise((resolve,reject)=>{
+//     let username="Chandra";
+//     let password="123456";
+//     if(username=="Chandra" && password=="123456"){
+//         resolve("success");
+//     }
+//     else{
+//         reject("Invalid user")
+//     }
+// })
+
+// myPromise.then((msg)=>{
+//     console.log(msg)
+// })
+// .finally(()=>console.log("ALL resource has been closed"))
+
+
+const myPromise = new Promise((resolve, reject) => {
+    let login = true;
+
+    if (login) {
+        resolve("Login successful");
+    } else {
+        reject("Username or password is incorrect");
+    }
+});
+
+async function loginHandler(){
+    try{
+          const loginStatus=await myPromise;
+          console.log(loginStatus)
+    }catch(e){
+        console.log(e)
+    }finally{
+        console.log("Closing all the open resources....")
+    }
+}
+loginHandler();
