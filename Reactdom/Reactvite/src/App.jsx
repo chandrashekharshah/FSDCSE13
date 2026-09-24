@@ -4,22 +4,27 @@ import reactLogo from './assets/react.svg'
 import image from './assets/image.png'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import UseProps from './Component/UseProps'
+import ICardGallery from './Component/ICardGallery'
 
 function App() {
   const a = 20;
   const name = "Chandra Shekhar";
 
   return (
-    <div style={{ border: '5px solid red', width: '500px', height: '300px' }}>
+    <div >
       
-      <h2>WELCOME TO REACT VITE</h2>
+      {/* <h2>WELCOME TO REACT VITE</h2>
 
-      <h2>Name: {name}</h2>
+      <h3>Name: {name}</h3>
 
-      <img src={image} height={200} width={200} />
+      <img style={{ borderRadius: '50%', }}src={image} height={200} width={200} /> */}
+      {/* <UseProps/> */}\
 
+      
+      <ICardGallery/>
     </div>
   )
 }
 
-export default App
+export default App 
